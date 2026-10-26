@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "jukebox",
+	"version": "${version}",
+	"name": "Jukebox+",
+	"description": "COOL MUSIC MOD!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/jukebox/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"me.nifzy.jukeboxplus.Jukebox"
+		],
+		"client": [
+			"me.nifzy.jukeboxplus.client.JukeboxClient"
+		]
+	},
+	"mixins": [
+		"jukebox.mixins.json",
+		{
+			"config": "jukebox.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
